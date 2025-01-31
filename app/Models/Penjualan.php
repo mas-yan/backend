@@ -10,4 +10,9 @@ class Penjualan extends Model
     {
         return $this->belongsTo(Marketing::class);
     }
+
+    public function pembayaran()
+    {
+        return $this->hasMany(Pembayaran::class);
+    }
 }
