@@ -21,10 +21,10 @@ class PaymentService
      */
     public function createPaymentPlan(array $data): void
     {
-        $penjualan = Penjualan::findOrFail($data['penjualan_id']);
+        $penjualan = Penjualan::where('transaction_number', $data['transaction_number'])->first();
 
         // Check existing payments
-        $existingPayments = $this->paymentRepository->getPaymentsBySale($data['penjualan_id']);
+        $existingPayments = $this->paymentRepository->getPaymentsBySale($penjualan->id);
         if ($existingPayments->count() > 0) {
             throw new Exception('Payment plan already exists for this sale');
         }
@@ -37,7 +37,7 @@ class PaymentService
         for ($i = 0; $i < $data['jumlah_installment']; $i++) {
             $dueDate = now()->addMonths($i + 1);
             $payments[] = [
-                'penjualan_id' => $data['penjualan_id'],
+                'penjualan_id' => $penjualan->id,
                 'installment_ke' => $i + 1,
                 'due_date' => $dueDate,
                 'amount' => $installmentAmount,

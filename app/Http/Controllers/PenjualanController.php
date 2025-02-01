@@ -16,6 +16,6 @@ class PenjualanController extends Controller
     public function index()
     {
         $result = $this->commissionService->getCommissions();
-        return response()->json(['data' => $result]);
+        return response()->json($result);
     }
 }

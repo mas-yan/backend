@@ -23,7 +23,7 @@ class PembayaranController extends Controller
     {
         try {
             $validated = $request->validate([
-                'penjualan_id' => 'required|exists:penjualans,id',
+                'transaction_number' => 'required|exists:penjualans,transaction_number',
                 'jumlah_installment' => 'required|integer|min:1',
             ]);
 

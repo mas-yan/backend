@@ -36,11 +36,11 @@ class CommissionService
             $commissionInfo = $this->calculateCommission($data->omzet);
 
             return [
-                'Marketing' => $data->marketing_name,
-                'Bulan' => $monthNames[$data->month] . ' ' . $data->year,
-                'Omzet' => $data->omzet,
-                'Komisi %' => $commissionInfo['percentage'],
-                'Komisi Nominal' => $commissionInfo['nominal']
+                'marketing' => $data->marketing_name,
+                'bulan' => $monthNames[$data->month] . ' ' . $data->year,
+                'omzet' => $data->omzet,
+                'komisi' => $commissionInfo['percentage'],
+                'komisi_nominal' => $commissionInfo['nominal']
             ];
         });
     }
