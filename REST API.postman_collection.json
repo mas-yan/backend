@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "8141fb19-963b-4166-8907-1e2914695587",
+		"_postman_id": "180957f2-11b0-4b98-9b48-d770dff6045b",
 		"name": "REST API",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "13628234"
@@ -56,10 +56,12 @@
 					}
 				},
 				"url": {
-					"raw": "{{base_url}}/api/payments",
+					"raw": "http://localhost:8000/api/payments",
+					"protocol": "http",
 					"host": [
-						"{{base_url}}"
+						"localhost"
 					],
+					"port": "8000",
 					"path": [
 						"api",
 						"payments"
@@ -77,10 +79,12 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{base_url}}/api/payments",
+					"raw": "http://localhost:8000/api/payments",
+					"protocol": "http",
 					"host": [
-						"{{base_url}}"
+						"localhost"
 					],
+					"port": "8000",
 					"path": [
 						"api",
 						"payments"
@@ -107,10 +111,12 @@
 					}
 				},
 				"url": {
-					"raw": "{{base_url}}/api/payments/2",
+					"raw": "http://localhost:8000/api/payments/2",
+					"protocol": "http",
 					"host": [
-						"{{base_url}}"
+						"localhost"
 					],
+					"port": "8000",
 					"path": [
 						"api",
 						"payments",
@@ -141,10 +147,12 @@
 					}
 				},
 				"url": {
-					"raw": "{{base_url}}/api/payments/2",
+					"raw": "http://localhost:8000/api/payments/2",
+					"protocol": "http",
 					"host": [
-						"{{base_url}}"
+						"localhost"
 					],
+					"port": "8000",
 					"path": [
 						"api",
 						"payments",
@@ -175,10 +183,12 @@
 					}
 				},
 				"url": {
-					"raw": "{{base_url}}/api/sales/1/payments",
+					"raw": "http://localhost:8000/api/sales/1/payments",
+					"protocol": "http",
 					"host": [
-						"{{base_url}}"
+						"localhost"
 					],
+					"port": "8000",
 					"path": [
 						"api",
 						"sales",
