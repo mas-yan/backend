@@ -48,7 +48,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"penjualan_id\": 1,\r\n    \"jumlah_installment\": 3,\r\n    \"due_dates\": [\"2023-06-30\", \"2023-07-30\", \"2023-08-30\"]\r\n}",
+					"raw": "{\r\n    \"penjualan_id\": 1,\r\n    \"jumlah_installment\": 3 \r\n}",
 					"options": {
 						"raw": {
 							"language": "json"

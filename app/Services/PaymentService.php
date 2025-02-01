@@ -34,10 +34,11 @@ class PaymentService
 
         // Prepare payment data
         $payments = [];
-        foreach ($data['due_dates'] as $index => $dueDate) {
+        for ($i = 0; $i < $data['jumlah_installment']; $i++) {
+            $dueDate = now()->addMonths($i + 1);
             $payments[] = [
                 'penjualan_id' => $data['penjualan_id'],
-                'installment_ke' => $index + 1,
+                'installment_ke' => $i + 1,
                 'due_date' => $dueDate,
                 'amount' => $installmentAmount,
                 'status' => 'unpaid',

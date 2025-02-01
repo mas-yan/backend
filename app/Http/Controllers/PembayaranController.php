@@ -25,7 +25,6 @@ class PembayaranController extends Controller
             $validated = $request->validate([
                 'penjualan_id' => 'required|exists:penjualans,id',
                 'jumlah_installment' => 'required|integer|min:1',
-                'due_dates' => 'required|array|size:' . $request->jumlah_installment
             ]);
 
             $this->paymentService->createPaymentPlan($validated);
