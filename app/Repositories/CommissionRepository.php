@@ -23,8 +23,8 @@ class CommissionRepository implements CommissionRepositoryInterface
             ->get();
     }
 
-    public function getPayments()
+    public function getSales()
     {
-        return Penjualan::get();
+        return Penjualan::with('marketing')->get();
     }
 }

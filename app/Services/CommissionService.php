@@ -15,7 +15,20 @@ class CommissionService
 
     public function getSales()
     {
-        return $this->commissionRepository->getPayments();
+        $getSales =  $this->commissionRepository->getSales();
+
+        return $getSales->map(function ($data) {
+
+            return [
+                'id' => $data->id,
+                'transaction_number' => $data->transaction_number,
+                'marketing' => $data->marketing->name,
+                'date' => $data->date,
+                'cargo_fee' => $data->cargo_fee,
+                'total_balance' => $data->total_balance,
+                'grand_total' => $data->grand_total,
+            ];
+        });
     }
 
     public function getCommissions()

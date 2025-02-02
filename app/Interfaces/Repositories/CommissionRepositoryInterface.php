@@ -5,5 +5,5 @@ namespace App\Interfaces\Repositories;
 interface CommissionRepositoryInterface
 {
     public function getGroupedSalesData();
-    public function getPayments();
+    public function getSales();
 }
