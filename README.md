@@ -19,13 +19,21 @@ Pada instalasi ini bisa menggunakan 2 cara yaitu menggunakan Docker atau XAMPP/L
     DB_PASSWORD=secret
     ```
 4. Jalankan perintah ini di terminal:
+    jika menggunakan windows
     ```bash
     docker run --rm -v ${pwd}:/app composer install
+    ```
+    jika menggunakan linux
+    ```bash
+    docker run --rm -v $(pwd):/app composer install
+    ```
+    setelah itu lanjutkan dengan perintah berikut
+    ```bash
     docker-compose build
     docker compose up
     docker-compose exec app php artisan key:generate
     ```
-5. Reconnect Docker (ctrl+x), kemudian jalankan:
+5. Reconnect Docker (ctrl+c), kemudian jalankan:
     ```bash
     docker compose up
     docker-compose exec app php artisan migrate --seed
