@@ -13,9 +13,14 @@ class PenjualanController extends Controller
         $this->commissionService = $commissionService;
     }
 
-    public function index()
+    public function comission()
     {
         $result = $this->commissionService->getCommissions();
+        return response()->json($result);
+    }
+    public function sale()
+    {
+        $result = $this->commissionService->getSales();
         return response()->json($result);
     }
 }

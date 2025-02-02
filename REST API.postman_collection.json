@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "180957f2-11b0-4b98-9b48-d770dff6045b",
+		"_postman_id": "4ded7e0a-ee44-431c-ae88-2d260533d5e0",
 		"name": "REST API",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "13628234"
+		"_exporter_id": "41717571"
 	},
 	"item": [
 		{
@@ -33,6 +33,41 @@
 					"path": [
 						"api",
 						"commissions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get sales",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/sales",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"sales"
 					]
 				}
 			},

@@ -22,4 +22,9 @@ class CommissionRepository implements CommissionRepositoryInterface
             ->orderBy('marketing_id')
             ->get();
     }
+
+    public function getPayments()
+    {
+        return Penjualan::get();
+    }
 }

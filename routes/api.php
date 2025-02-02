@@ -10,7 +10,7 @@ Route::get('/user', function (Request $request) {
 })->middleware('auth:sanctum');
 
 
-Route::get('/commissions', [PenjualanController::class, 'index']);
+Route::get('/commissions', [PenjualanController::class, 'comission']);
 Route::prefix('payments')->group(function () {
     Route::post('/', [PembayaranController::class, 'store']);
     Route::get('/', [PembayaranController::class, 'index']);
@@ -18,4 +18,7 @@ Route::prefix('payments')->group(function () {
     Route::put('/{id}', [PembayaranController::class, 'update']);
 });
 
-Route::get('/sales/{saleId}/payments', [PembayaranController::class, 'getBySale']);
+Route::prefix('sales')->group(function () {
+    Route::get('/', [PenjualanController::class, 'sale']);
+    Route::get('{saleId}/payments', [PembayaranController::class, 'getBySale']);
+});

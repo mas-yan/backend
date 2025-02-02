@@ -13,6 +13,11 @@ class CommissionService
         $this->commissionRepository = $commissionRepository;
     }
 
+    public function getSales()
+    {
+        return $this->commissionRepository->getPayments();
+    }
+
     public function getCommissions()
     {
         $salesData = $this->commissionRepository->getGroupedSalesData();
